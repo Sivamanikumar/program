@@ -1,0 +1,50 @@
+#include<stdio.h>
+int main()
+{
+    char b[20];
+    char c[20];
+    scanf("%s",b);
+    scanf("%s",c);
+    int a,i,j;
+    for(i=0;i<5;i++)
+    {
+        for(j=i+1;j<5;j++)
+        {
+            if(b[j]<b[i])
+            {
+                char t=b[j];
+                b[j]=b[i];
+                b[i]=t;
+            }
+        }
+    }
+    for(i=0;i<5;i++)
+    {
+        for(j=i+1;j<5;j++)
+        {
+          if(c[j]<c[i])
+          {
+            char t=c[j];
+            c[j]=c[i];
+            c[i]=t;
+           }
+        }
+
+    }
+    for(i=0;i<5;i++)
+    {
+        if(b[i]!=c[i])
+        {
+            a=1;
+        }
+    }
+    if(a!=1)
+    {
+        printf("anagram");
+    }
+    else
+    {
+        printf("not anagram");
+    }
+
+}
